@@ -42,7 +42,7 @@ public class LoginController {
         }
     }
 
-    @RequestMapping(value = {"/login2"})
+    @RequestMapping(value = {"/login"})
     public String loginIndex(HttpServletRequest request) {
         //如果已登录过，直接跳转到index界面
         System.out.println("进入login2");

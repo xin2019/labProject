@@ -27,6 +27,9 @@ public class LoginInterceptor implements HandlerInterceptor {
             if (user != null) {
                 System.out.println("准备跳到 index");
                 return true;
+            }else{
+                response.sendRedirect("/login");
+                return false;
             }
 
         } catch (Exception e) {

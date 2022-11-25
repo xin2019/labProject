@@ -23,8 +23,8 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
         registration.addPathPatterns("/**"); //所有路径都被拦截
         registration.excludePathPatterns(    //添加不拦截路径
                 "/login1",                    //登录路径
-                "/login2",
-                "/",                //html静态资源
+                "/login",
+                           //html静态资源
                 "/js/**",                  //js静态资源
                 "/css/**",                  //css静态资源
                 "/fonts/**",
@@ -35,6 +35,9 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("forward:/login2");
+        registry.addViewController("/").setViewName("forward:/login");
+        registry.addViewController("/login").setViewName("/");
+
+        registry.addViewController("/login.html").setViewName("/");
     }
 }
