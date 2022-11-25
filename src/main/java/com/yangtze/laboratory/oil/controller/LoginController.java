@@ -2,6 +2,8 @@ package com.yangtze.laboratory.oil.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.yangtze.laboratory.oil.pojo.User;
+import com.yangtze.laboratory.oil.service.LoginService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
@@ -23,8 +25,33 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class LoginController {
 
-    @RequestMapping(value = {"", "/", "/login","/login.html"})
-    public String loginPage(){
+    @Autowired
+    private LoginService loginService;
+@ResponseBody
+    @RequestMapping(value = {"/login1"})
+    public String testLogin(HttpServletRequest request, @RequestParam("username")String username,@RequestParam("password")String password){
+        System.out.println("进入login1");
+        Boolean res= loginService.loginValidate(username,password);
+        if(res==true){
+            User user=new User(username,password);
+            request.getSession().setAttribute("user",user);
+            return "success";
+//            return "redirect:/index";
+        }else{
+            return "failed";
+        }
+    }
+
+    @RequestMapping(value = {"/login2"})
+    public String loginIndex(HttpServletRequest request) {
+        //如果已登录过，直接跳转到index界面
+        System.out.println("进入login2");
+        Object user = request.getSession().getAttribute("user");
+        if(user!=null){
+            System.out.println("user=>"+user);
+            return "index";
+        }
+        System.out.println("user为空");
         return "login";
     }
 
@@ -34,6 +61,13 @@ public class LoginController {
         User user = (User) request.getSession().getAttribute("user");
         model.addAttribute("user", user);
         return "index";
+    }
+
+    @RequestMapping("/welcome")
+    public String edd(Model model, HttpServletRequest request){
+        System.out.println("welcome");
+
+        return "welcome";
     }
 
     @RequestMapping("/logout")

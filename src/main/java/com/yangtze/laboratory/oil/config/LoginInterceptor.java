@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("执行了拦截器的preHandle方法");
+                System.out.println("执行了拦截器的preHandle方法");
         try {
             HttpSession session = request.getSession();
             //统一拦截（查询当前session是否存在user）(这里user会在每次登录成功后，写入session)
@@ -28,9 +28,7 @@ public class LoginInterceptor implements HandlerInterceptor {
                 System.out.println("准备跳到 index");
                 return true;
             }
-            System.out.println("zhixingle==");
-            System.out.println("contestx==>"+request.getContextPath());
-            response.sendRedirect(request.getContextPath() + "login");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
