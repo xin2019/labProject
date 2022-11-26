@@ -49,17 +49,18 @@ public class LoginController {
         Object user = request.getSession().getAttribute("user");
         if(user!=null){
             System.out.println("user=>"+user);
-            return "index";
+            return "/index";
         }
         System.out.println("user为空");
         return "login";
     }
 
     @RequestMapping("/index")
-    public String indexPage(Model model, HttpServletRequest request){
+    public String indexPage( HttpServletRequest request){
         System.out.println("jinlail");
         User user = (User) request.getSession().getAttribute("user");
-        model.addAttribute("user", user);
+       request.getSession().setAttribute("user",user);
+       request.setAttribute("user",user);
         return "index";
     }
 
