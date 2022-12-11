@@ -67,8 +67,8 @@ public class LoginController {
     @RequestMapping("/welcome")
     public String edd(Model model, HttpServletRequest request){
         System.out.println("welcome");
-
-        return "welcome";
+        return "yemianjilu";
+//        return "welcome";
     }
 
     @RequestMapping("/logout")

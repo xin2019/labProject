@@ -93,111 +93,99 @@
             elem: "#classtree", //指定元素
             nodes: [ //节点
                 {
-                    name: '油田',
+                    name: '胜利油田',
                     spread: true,
                     // color: "#ffcdda",
                     id: 1,
                     children: [{
                         name: '河口采油厂',
                         id: 11,
-                        href: 'https://blog.csdn.net/ii950606/article/details/109400855/'
-                    }, {
+                        href: '#',
+                        children: [{
+                            name: '管理一区',
+                            id: 111,
+                        },{
+                            name: '管理六区',
+                            id: 112
+                        },{
+                            name: '管理七区',
+                            id: 113
+                        },{
+                            name: '管理九区',
+                            id: 114
+                        }]
+                         },
+                        {
                         name: '孤东采油厂',
-                        id: 12
-                    }]
-                }, {
+                        id: 12,
+                        children: [{
+                            name: '管理一区',
+                            id: 121,
+                        },{
+                            name: '管理二区',
+                            id: 122
+                        },{
+                            name: '管理三区',
+                            id: 123
+                        },{
+                            name: '管理四区',
+                            id: 124
+                        }]
+                         },
+                        {
+                            name: '桩西采油厂',
+                            id: 13,
+                            children: [{
+                                name: '管理一区',
+                                id: 131,
+                            },{
+                                name: '管理二区',
+                                id: 132
+                            },{
+                                name: '管理三区',
+                                id: 133
+                            },{
+                                name: '管理四区',
+                                id: 134
+                            }]
+                        },
+                        {
+                            name: '纯梁采油厂',
+                            id: 14,
+                            children: [{
+                                name: '梁北管理区',
+                                id: 141
+                            }]
+                        },
+                        {
+                            name: '东辛采油厂',
+                            id: 15,
+                            children: [{
+                                name: '营一管理区',
+                                id: 151
+                            }]
+                        },
+                        {
+                            name: '现河采油厂',
+                            id: 16,
+                            children: [{
+                                name: '现河庄管理区',
+                                id: 161
+                            },{
+                                name: '史南管理区',
+                                id: 162
+                            }]
+                        }
+                ]}, {
                     name: '川渝油田',
                     spread: false,
                     id: 2,
                     children: [{
                         name: '1区',
                         id: 21,
-                        spread: true,
-                        children: [{
-                            name: '采购',
-                            id: 211
-                        }, {
-                            name: '渠道',
-                            id: 212
-                        }]
-                    }, {
-                        name: '维修部',
-                        id: 22,
-                        children: [{
-                            name: '北组',
-                            id: 221
-                        }, {
-                            name: '南组',
-                            id: 222
-                        }, {
-                            name: '维管组',
-                            id: 223
-                        },
-                            {
-                                name: '北组',
-                                id: 221
-                            }, {
-                                name: '南组',
-                                id: 222
-                            }, {
-                                name: '维管组',
-                                id: 223
-                            },
-                            {
-                                name: '北组',
-                                id: 221
-                            }, {
-                                name: '南组',
-                                id: 222
-                            }, {
-                                name: '维管组',
-                                id: 223
-                            },
-                            {
-                                name: '北组',
-                                id: 221
-                            }, {
-                                name: '南组',
-                                id: 222
-                            }, {
-                                name: '维管组',
-                                id: 223
-                            },{
-                                name: '北组',
-                                id: 221
-                            }, {
-                                name: '南组',
-                                id: 222
-                            }, {
-                                name: '维管组',
-                                id: 223
-                            },
-                            {
-                                name: '北组',
-                                id: 221
-                            }, {
-                                name: '南组',
-                                id: 222
-                            }, {
-                                name: '维管组',
-                                id: 223
-                            },{
-                                name: '北组',
-                                id: 221
-                            }, {
-                                name: '南组',
-                                id: 222
-                            }, {
-                                name: '维管组',
-                                id: 223
-                            }
-                        ]
+                        spread: true
                     }]
                 },
-                // {
-                //     name: 'ITS部',
-                //     id: 1
-                // },
                 {
                     name: '井筒泥浆液面高度',
                     id: 3,
@@ -206,15 +194,32 @@
                         name: '50140',
                         id: 31,
                         children: [{
-                            name: '前端',
-                            id: 121
-                        }, {
-                            name: '全端',
-                            id: 122
+                            name: '建页1',
+                            id: 311
                         }]
                     }, {
                         name: '50143',
-                        id: 12
+                        id: 32,
+                        children: [{
+                            name: '焦页5',
+                            id: 321
+                        }]
+                    },{
+                        name: '70231',
+                        id: 33
+                    }]
+                },{
+                    name: '回声仪导入',
+                    id: 4,
+                    spread: true
+
+                },{
+                    name: '江汉油田',
+                    id: 5,
+                    spread: true,
+                    children: [{
+                        name: '总口区',
+                        id: 51
                     }]
                 }
             ],
