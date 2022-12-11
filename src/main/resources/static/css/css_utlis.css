@@ -1,0 +1,49 @@
+body{
+	overflow: hidden;
+}
+#add_btn,#myTab li a{
+	/*padding:5px;fon-size:12px;font-weight:bold;border:1px #eee solid;*/
+}
+#myTab li{
+	background-color:white;
+}
+.list-group-item{
+	border:0px;margin:-22px 0px 0px 15px;padding:2px 5px;
+}
+.list-group-item a{
+	color:black;text-decoration:none;
+}
+.nav-stacked li{
+	list-style-type:none;margin:8px 0px 0px -5px;
+}
+.nav-stacked .glyphicon {
+    color: #337ab7;
+}
+#alert_div {
+    position: fixed;
+    top: 20%;
+    z-index: 999;
+    left: 45%;
+    display: none;
+}
+#user_root li,#rt_tree li{
+	list-style-type:none;margin-left:-15px;
+}
+#user_root li a{
+	text-decoration:none;
+}
+#user_root input{
+	margin:0px 0px 0px 5px;
+}
+#user_root .glyphicon{
+	float:left;color:#337ab7;padding-right:5px;
+}
+.tm{
+	float:left;
+}
+#str,#end{
+	width:140px;float:left;
+}
+.tm_lab{
+	width:30px;height:35px;line-height:35px;display:block;float:left;
+}

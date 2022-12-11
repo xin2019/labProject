@@ -20,10 +20,10 @@
 <body>
     <!-- 顶部开始 -->
     <div class="container">
-        <div class="logo"><a href="/index">连续页面后台管理</a></div>
-        <div class="left_open">
-            <i title="展开左侧栏" class="iconfont">&#xe699;</i>
-        </div>
+        <div class="logo"><a href="/index">连续液面后台管理</a></div>
+        <!--<div class="left_open">-->
+            <!--<i title="展开左侧栏" class="iconfont">&#xe699;</i>-->
+        <!--</div>-->
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
             <a href="javascript:;" th:text="${user}?${user.username}:''"></a>
@@ -47,15 +47,17 @@
         <ul id="nav">
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe6b8;</i>
+                    <i class="iconfont">&#xe723;</i>
                     <cite>液面数据</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
+                    <!--<i class="iconfont nav_right">&#xe697;</i>-->
                 </a>
-                <ul class="sub-menu">
+                <!--<ul class="sub-menu">-->
+                <ul >
 
-                    <li>
-                        <a _href="zanweikaifa.html">
-                            <i class="iconfont">&#xe6a7;</i>
+                    <li >
+                        <a _href="/yemianjilu" style="margin-left: 15px;" class="active">
+                            <!--<i class="iconfont">&#xe6a7;</i>-->
+                            <i class="layui-icon">&#xe655;</i>
                             <cite>液面记录</cite>
 
                         </a>
@@ -67,18 +69,18 @@
                 <a href="javascript:;">
                     <i class="iconfont">&#xe723;</i>
                     <cite>数据查询</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
+                    <!--<i class="iconfont nav_right">&#xe697;</i>-->
                 </a>
-                <ul class="sub-menu">
+                <ul >
                     <li>
-                        <a _href="zanweikaifa.html">
-                            <i class="iconfont">&#xe6a7;</i>
+                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                            <i class="layui-icon">&#xe655;</i>
                             <cite>未匹配井</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="zanweikaifa.html">
-                            <i class="iconfont">&#xe6a7;</i>
+                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                            <i class="layui-icon">&#xe655;</i>
                             <cite>校验历史</cite>
                         </a>
                     </li >
@@ -86,26 +88,26 @@
             </li>
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont">&#xe726;</i>
+                    <i class="iconfont">&#xe723;</i>
                     <cite>系统设置</cite>
-                    <i class="iconfont nav_right">&#xe697;</i>
+                    <!--<i class="iconfont nav_right">&#xe697;</i>-->
                 </a>
-                <ul class="sub-menu">
+                <ul >
                     <li>
-                        <a _href="zanweikaifa.html">
-                            <i class="iconfont">&#xe6a7;</i>
+                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                            <i class="layui-icon">&#xe655;</i>
                             <cite>井号设置</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="zanweikaifa.html">
-                            <i class="iconfont">&#xe6a7;</i>
+                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                            <i class="layui-icon">&#xe655;</i>
                             <cite>用户设置</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="zanweikaifa.html">
-                            <i class="iconfont">&#xe6a7;</i>
+                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                            <i class="layui-icon">&#xe655;</i>
                             <cite>结构组成</cite>
                         </a>
                     </li >
@@ -121,11 +123,12 @@
         <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
         <!--<div class="layui-tab tab" lay-filter="xbs_tab" >-->
           <ul class="layui-tab-title">
-            <li>欢迎界面</li>
+            <li>欢迎页面</li>
           </ul>
           <div class="layui-tab-content">
             <div class="layui-tab-item layui-show">
                 <iframe src='./welcome.html' frameborder="0" scrolling="yes" class="x-iframe">
+                <!--<iframe src='./yemianjilu.html' frameborder="0" scrolling="yes" class="x-iframe">-->
 
                 </iframe>
             </div>
