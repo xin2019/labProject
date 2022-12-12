@@ -21,9 +21,9 @@
     <!-- 顶部开始 -->
     <div class="container">
         <div class="logo"><a href="/index">连续液面后台管理</a></div>
-        <!--<div class="left_open">-->
-            <!--<i title="展开左侧栏" class="iconfont">&#xe699;</i>-->
-        <!--</div>-->
+        <div class="left_open">
+            <i title="展开左侧栏" class="iconfont">&#xe699;</i>
+        </div>
         <ul class="layui-nav right" lay-filter="">
           <li class="layui-nav-item">
             <a href="javascript:;" th:text="${user}?${user.username}:''"></a>
@@ -55,7 +55,7 @@
                 <ul >
 
                     <li >
-                        <a _href="/yemianjilu" style="margin-left: 15px;" class="active">
+                        <a _href="/yemianshuju/yemianjilu" style="margin-left: 15px;" class="active">
                             <!--<i class="iconfont">&#xe6a7;</i>-->
                             <i class="layui-icon">&#xe655;</i>
                             <cite>液面记录</cite>
@@ -66,20 +66,20 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="#">
                     <i class="iconfont">&#xe723;</i>
                     <cite>数据查询</cite>
                     <!--<i class="iconfont nav_right">&#xe697;</i>-->
                 </a>
                 <ul >
                     <li>
-                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                        <a _href="/yemianshuju/weipipeijing" style="margin-left: 15px;">
                             <i class="layui-icon">&#xe655;</i>
                             <cite>未匹配井</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                        <a _href="/yemianshuju/jiaoyanlishi" style="margin-left: 15px;">
                             <i class="layui-icon">&#xe655;</i>
                             <cite>校验历史</cite>
                         </a>
