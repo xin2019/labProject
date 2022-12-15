@@ -23,8 +23,7 @@ import java.net.UnknownHostException;
  */
 // 客户端类，每60s模拟发送250个记录
 class CollectAndUpload {//创建公共类
-    private String host = "124.222.235.168";
-//    private String host = "localhost";
+    private String host = "localhost";
     private int port = 9092;
     private int accpetLen=250;
     private DataOutputStream out=null;
