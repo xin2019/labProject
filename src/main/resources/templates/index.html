@@ -15,6 +15,10 @@
     <!--<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>-->
     <script src="/lib/layui/layui.js" th:src="@{/lib/layui/layui.js}" charset="utf-8"></script>
     <script type="text/javascript" src="/js/xadmin.js" th:src="@{/js/xadmin.js}"></script>
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+    <script type="text/javascript" src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}" ></script>
+    <script type="text/javascript" src="/js/treeview.js" th:src="@{/js/treeview.js}"></script>
+
 
 </head>
 <body>
@@ -46,7 +50,7 @@
       <div id="side-nav">
         <ul id="nav">
             <li>
-                <a href="javascript:;">
+                <a href="javascript:void(0);">
                     <i class="iconfont">&#xe723;</i>
                     <cite>液面数据</cite>
                     <!--<i class="iconfont nav_right">&#xe697;</i>-->
@@ -66,7 +70,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">
+                <a href="javascript:void(0);">
                     <i class="iconfont">&#xe723;</i>
                     <cite>数据查询</cite>
                     <!--<i class="iconfont nav_right">&#xe697;</i>-->
@@ -100,13 +104,13 @@
                         </a>
                     </li >
                     <li>
-                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                        <a _href="/xitongshezhi/yonghushezhi" style="margin-left: 15px;">
                             <i class="layui-icon">&#xe655;</i>
                             <cite>用户设置</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="zanweikaifa.html" style="margin-left: 15px;">
+                        <a _href="/xitongshezhi/jiegouzucheng" style="margin-left: 15px;">
                             <i class="layui-icon">&#xe655;</i>
                             <cite>结构组成</cite>
                         </a>

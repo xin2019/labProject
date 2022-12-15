@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>连续液面</title>
+    <title>用户设置</title>
     <link rel="stylesheet" href="/css/layui.css" th:href="@{/css/layui.css}" media="all">
     <!--<link rel="stylesheet" type="text/css" href="/css/iconfont.css" th:href="@{/css/iconfont.css}">-->
     <link rel="stylesheet" href="/layui/css/layui.css" th:href="@{/layui/css/layui.css}">
@@ -35,10 +35,10 @@
             border-radius: 19px;
         }
 
-        cite{
-            font-size: 16px;
-            color: #000;
-        }
+    cite{
+        font-size: 16px;
+        color: #000;
+    }
 
     </style>
 
@@ -47,61 +47,52 @@
 
 <body class="content">
 <div>
+    <div>
+        <div class="tab-content" style="">
 
-    <!-- left -->
-    <div id="lft" class="container-fluid" style="width:18.7%;float:left;padding:10px;">
-        <div class="layui-form-item">
-            <div class="inputdiv" style="margin-left:5px;">
-                <i class="layui-icon layui-icon-search"></i>
-                <input type="text" placeholder="搜索"  style="text-align: center;border-style: none;">
-            </div>
-        </div>
-        <div class="panel panel-default" style="position:absolute;width:17.7%;height:74%;">
-            <div class="panel-body" style="overflow-x: hidden; height: 100%;">
+            <div class="tab-pane fade in active" id="grid" style="padding:0px 20px 20px 20px;">
+                <div class="bootstrap-table bootstrap3">
+                    <div class="fixed-table-toolbar"><div class="bs-bars pull-left">
+                        <div style="margin:15px;">
 
-                <ul  id="classtree" class="layui-select-title" style="height: 500px;">
+                            <button class="layui-btn layui-btn-radius layui-btn-primary" style="width:150px;">
+                                <!--<i class="layui-icon layui-icon-addition"></i>-->
+                                <span class="glyphicon glyphicon-plus" style="font-size:20px;"></span>
+                                添加</button>
 
+                        </div>
+                    </div></div>
 
-                </ul>
-                <!-- left -->
-            </div>
+                    <div class="fixed-table-container fixed-height" style="height: 400px; padding-bottom: 37px;">
+                        <div class="fixed-table-header" style="margin-right: 0px;"></div>
+                        <div class="fixed-table-body">
 
-            <div style="margin-left:20px; margin-top:15px;">
-
-                <button class="layui-btn layui-btn-radius layui-btn" style="width:150px;background:#D2D2D2;color:black;">
-                    <!--<i class="layui-icon layui-icon-addition"></i>-->
-                    <span class="glyphicon glyphicon-plus" style="font-size:20px;"></span>
-                    添加</button>
-
+                            <table id="table" class="table table-striped table-bordered table-hover" style="margin-top: -36px;"><thead class=""><tr><th style="" data-field="u_type"><div class="th-inner ">用户类型</div><div class="fht-cell"></div></th><th style="" data-field="u_name"><div class="th-inner ">用户名</div><div class="fht-cell"></div></th><th style="" data-field="u_pass"><div class="th-inner ">密码</div><div class="fht-cell"></div></th><th style="" data-field="u_root"><div class="th-inner ">用户权限</div><div class="fht-cell"></div></th><th style="text-align: center; vertical-align: middle; width: 220px; " data-field="-1"><div class="th-inner ">操作</div><div class="fht-cell"></div></th></tr></thead><tbody><tr data-index="0"><td>超级管理员</td><td>admin</td><td>admin</td><td>所有权限</td><td style="text-align: center; vertical-align: middle; width: 220px; "><a class="btn btn-default  btn-xs" data-toggle="modal" data-target="#myModal" onclick="edit_func({&quot;u_id&quot;:&quot;1&quot;,&quot;u_name&quot;:&quot;admin&quot;,&quot;u_pass&quot;:&quot;admin&quot;,&quot;u_type&quot;:&quot;超级管理员&quot;,&quot;param_on_off&quot;:0})"><span class="glyphicon glyphicon-pencil"></span>编辑</a></td></tr><tr data-index="1"><td>管理员</td><td>xin</td><td>123</td><td>单击单元格查看权限</td><td style="text-align: center; vertical-align: middle; width: 220px; "><a class="btn btn-default  btn-xs" data-toggle="modal" data-target="#myModal" onclick="edit_func({&quot;u_id&quot;:&quot;10cf964017994531a2373d54633bddd7&quot;,&quot;u_name&quot;:&quot;jhyt&quot;,&quot;u_pass&quot;:&quot;jhyt&quot;,&quot;u_type&quot;:&quot;管理员&quot;,&quot;param_on_off&quot;:0})"><span class="glyphicon glyphicon-pencil"></span>编辑</a></td></tr><tr data-index="2"><td>管理员</td><td>xin</td><td>123</td><td>单击单元格查看权限</td><td style="text-align: center; vertical-align: middle; width: 220px; "><a class="btn btn-default  btn-xs" data-toggle="modal" data-target="#myModal" onclick="edit_func({&quot;u_id&quot;:&quot;9dddfa7d04d245e2a1ad4a675bd67f0a&quot;,&quot;u_name&quot;:&quot;焦石&quot;,&quot;u_pass&quot;:&quot;123456&quot;,&quot;u_type&quot;:&quot;管理员&quot;,&quot;param_on_off&quot;:1})"><span class="glyphicon glyphicon-pencil"></span>编辑</a></td></tr><tr data-index="3"><td>管理员</td><td>xin</td><td>123</td><td>单击单元格查看权限</td><td style="text-align: center; vertical-align: middle; width: 220px; "><a class="btn btn-default  btn-xs" data-toggle="modal" data-target="#myModal" onclick="edit_func({&quot;u_id&quot;:&quot;a7cde1a7926f43169412096543ed9eef&quot;,&quot;u_name&quot;:&quot;jhzj&quot;,&quot;u_pass&quot;:&quot;123456&quot;,&quot;u_type&quot;:&quot;管理员&quot;,&quot;param_on_off&quot;:1})"><span class="glyphicon glyphicon-pencil"></span>编辑</a></td></tr><tr data-index="4"><td>管理员</td><td>xin</td><td>123</td><td>单击单元格查看权限</td><td style="text-align: center; vertical-align: middle; width: 220px; "><a class="btn btn-default  btn-xs" data-toggle="modal" data-target="#myModal" onclick="edit_func({&quot;u_id&quot;:&quot;c93ec97639294eb4bc643b4679abe64f&quot;,&quot;u_name&quot;:&quot;test&quot;,&quot;u_pass&quot;:&quot;test&quot;,&quot;u_type&quot;:&quot;管理员&quot;,&quot;param_on_off&quot;:1})"><span class="glyphicon glyphicon-pencil"></span>编辑</a></td></tr></tbody></table><div class="fixed-table-border" style="width: 1090px; height: 240.8px;"></div></div>
+                        <div class="fixed-table-footer" style="display: none;"><table><thead><tr></tr></thead></table></div>
+                    </div>
+                    <div class="fixed-table-pagination" style="display: block;"><div class="pull-left pagination-detail"><span class="pagination-info">
+      显示第 1 到第 5 条记录，总共 6 条记录
+      </span><span class="page-list">每页显示<span class="btn-group dropdown dropup">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+        <span class="page-size">
+        5
+        </span>
+        <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li role="menuitem" class="active">
+                <a href="#">5</a>
+            </li>
+            <li role="menuitem" class="">
+                <a href="#">10</a>
+            </li>
+        </ul></span> 条记录</span></div><div  class="pull-right pagination">
+                        <ul class="pagination">
+                            <li class="page-item page-pre"><a class="page-link" aria-label="previous page" href="javascript:void(0)">‹</a></li><li class="page-item active"><a class="page-link" aria-label="to page 1" href="javascript:void(0)">1</a></li><li class="page-item"><a class="page-link" aria-label="to page 2" href="javascript:void(0)">2</a></li><li class="page-item page-next"><a class="page-link" aria-label="next page" href="javascript:void(0)">›</a></li></ul></div></div>
+                </div><div class="clearfix"></div>
             </div>
         </div>
     </div>
-
-    <div id="rgt" class="container-fluid" style="float:right;width:81%;padding:10px;">
-        <div class="panel panel-default" style="position:absolute;width:79%;height:96%;">
-            <div class="panel-body">
-                <div id="right" style="overflow-x:hidden;">
-                    <div class="bootstrap-table bootstrap3">
-                        <div class="fixed-table-toolbar">
-                            <div class="pull-right search input-group">
-
-                            </div>
-                        </div>
-
-                        <div class="fixed-table-container fixed-height" style="height: 450px; width:99%;padding-bottom: 37px;">
-                            <div class="fixed-table-header" style="margin-right: 0px;"><table style="width: 861px;" class="table table-striped table-bordered table-hover"></table></div>
-                            <div class="fixed-table-body">
-
-                                <table id="table" data-search="true" class="table table-striped table-bordered table-hover" style="margin-top: -20px;"><thead class=""><tr><th style="" data-field="dev_id"><div class="th-inner ">设备ID</div><div class="fht-cell"></div></th><th style="" data-field="well_name"><div class="th-inner ">名称</div><div class="fht-cell"></div></th><th style="" data-field="name1"><div class="th-inner ">别名</div><div class="fht-cell"></div></th><th style="" data-field="-1"><div class="th-inner ">操作</div><div class="fht-cell"></div></th></tr></thead><tbody><tr class="no-records-found"><td colspan="4">没有找到匹配的记录</td></tr></tbody></table></div>
-                            <div class="fixed-table-footer" style="display: none;"><table><thead><tr></tr></thead></table></div>
-                        </div>
-
-                    </div><div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 </body>
 <script src="/layui/layui.js" th:src="@{/layui/layui.js}"></script>
@@ -141,24 +132,24 @@
                             name: '管理九区',
                             id: 114
                         }]
-                    },
+                         },
                         {
-                            name: '孤东采油厂',
-                            id: 12,
-                            children: [{
-                                name: '管理一区',
-                                id: 121,
-                            },{
-                                name: '管理二区',
-                                id: 122
-                            },{
-                                name: '管理三区',
-                                id: 123
-                            },{
-                                name: '管理四区',
-                                id: 124
-                            }]
-                        },
+                        name: '孤东采油厂',
+                        id: 12,
+                        children: [{
+                            name: '管理一区',
+                            id: 121,
+                        },{
+                            name: '管理二区',
+                            id: 122
+                        },{
+                            name: '管理三区',
+                            id: 123
+                        },{
+                            name: '管理四区',
+                            id: 124
+                        }]
+                         },
                         {
                             name: '桩西采油厂',
                             id: 13,
@@ -203,7 +194,7 @@
                                 id: 162
                             }]
                         }
-                    ]}, {
+                ]}, {
                     name: '川渝油田',
                     spread: false,
                     id: 2,

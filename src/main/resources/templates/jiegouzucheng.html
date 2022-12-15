@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>结构组成</title>
+
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <!--<link rel="stylesheet" type="text/css" href="/css/utlis.css" th:href="@{/css/utlis.css}">-->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-treeview.css" th:href="@{/css/bootstrap-treeview.css}">
+    <script type="text/javascript" src="/js/jquery.min.js" th:src="@{/js/jquery.min.js}"> </script>
+    <script type="text/javascript" src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}" ></script>
+    <script type="text/javascript" src="/js/treeview.js" th:src="@{/js/treeview.js}"></script>
+
+
+    <!--<link rel="stylesheet" type="text/css" href="http://58.54.249.118:8261/bootstrap/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="http://58.54.249.118:8261/bootstrap/bootstrap-treeview.css">-->
+    <!--<script type="text/javascript" src="http://58.54.249.118:8261/js/jquery-2.1.1.js"></script>-->
+    <!--<script type="text/javascript" src="http://58.54.249.118:8261/bootstrap/bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="http://58.54.249.118:8261/bootstrap/bootstrap-treeview.js"></script>-->
+
+
+
+
+</head>
+
+<body class="content">
+<div>
+
+    <div class="tab-content" style="width:100%;">
+        <div role="tabpanel" class="tab-pane active" id="tab1">
+            <!-- left -->
+            <div id="lft" class="container-fluid" style="float:left;width:60%;padding:10px 10px 10px 10px;">
+                <div id="lft_panel" class="panel panel-default" style="position:absolute;width:59%;
+																		height:96%;">
+                    <div class="panel-body" style="padding:10px;">
+                        <div id="left" style="overflow-x:hidden;">
+                            <p style="font-size:16px;font-weight:bold;width:100%;border-bottom:1px #ccc solid;">
+                                结构编辑
+                            </p>
+                            <ul id="tab_tle" class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="javascript:;" data-toggle="tab" data-target="#add_div">添加</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-toggle="tab" data-target="#update_div">修改</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" data-toggle="tab" data-target="#delete_div">删除</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                        </div>
+                        <div class="tab-content" style="width:100%;margin:auto;">
+                            <div id="add_div" class="tab-pane active" style="overflow-x: hidden; height: 340px;"><ul id="menu_list"><li id="93d6a034ff294492bbc1f2d97d2f372b" pid="1"><span>连续液面<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="41fb9caea3954c2197279e70f792e2bc" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>胜利油田<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="0fe509073c1545f6acb21c6cc9069816" pid="41fb9caea3954c2197279e70f792e2bc"><span>河口采油厂<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="531eaaf2608540c8b6b24b6ff1ff8abe" pid="0fe509073c1545f6acb21c6cc9069816"><span>节点7<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="f589b7f88c50493f8862a8f118699950" pid="0fe509073c1545f6acb21c6cc9069816"><span>管理六区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="69e18ba36cc34faa90caecc54d2ea85b" pid="0fe509073c1545f6acb21c6cc9069816"><span>管理七区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="b4a3d3fb7349414d97ef5f9f61234b12" pid="0fe509073c1545f6acb21c6cc9069816"><span>管理一区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="632728323406416ab78e4055a52f25b9" pid="0fe509073c1545f6acb21c6cc9069816"><span>管理九区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="1b88c84adcbd4474b4fd8c584b5878d4" pid="41fb9caea3954c2197279e70f792e2bc"><span>孤东采油厂<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="04023d89d38f4bd39d82e43ad5a46c78" pid="1b88c84adcbd4474b4fd8c584b5878d4"><span>管理一区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="e3157b17b098478ba60c13536fc7690d" pid="1b88c84adcbd4474b4fd8c584b5878d4"><span>管理二区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="0ebfe42bf49548918c713ea070180d8a" pid="1b88c84adcbd4474b4fd8c584b5878d4"><span>管理三区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="aa1810726bad44f38496b03b8775b10c" pid="1b88c84adcbd4474b4fd8c584b5878d4"><span>管理四区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="fbab2f22ad034710a7c024e026556980" pid="41fb9caea3954c2197279e70f792e2bc"><span>桩西采油厂<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="648d738c17fd4c36b9037434488e660a" pid="fbab2f22ad034710a7c024e026556980"><span>管理一区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="890202fe04dc416795bc8f04afdc9c37" pid="fbab2f22ad034710a7c024e026556980"><span>管理二区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="e480c7af06234f07bd5811de9f6c0140" pid="fbab2f22ad034710a7c024e026556980"><span>管理三区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="bb7f95694b0b41618f1d36930b16baf4" pid="fbab2f22ad034710a7c024e026556980"><span>管理四区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="ba9b1f966854495d9d3c68ae8e4bf2ec" pid="41fb9caea3954c2197279e70f792e2bc"><span>纯梁采油厂<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="b0bffbebc2ec4cbdade10168ba9d9bde" pid="ba9b1f966854495d9d3c68ae8e4bf2ec"><span>梁北管理区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="60dfe351efa549048a5c182aa9290cf8" pid="41fb9caea3954c2197279e70f792e2bc"><span>节点5<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="fa549a3948cd4b84ad13ebfa139dec0a" pid="41fb9caea3954c2197279e70f792e2bc"><span>节点6<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="69a67dc70120405b84da726536b0262d" pid="41fb9caea3954c2197279e70f792e2bc"><span>东辛采油厂<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="4cec7ad354f1473caeaba2149a14dc91" pid="69a67dc70120405b84da726536b0262d"><span>营一管理区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="837086ee444344e98f9ceac63e0d99ab" pid="41fb9caea3954c2197279e70f792e2bc"><span>现河采油厂<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="0f706e8fae614d27b2473ef02586e598" pid="837086ee444344e98f9ceac63e0d99ab"><span>现河庄管理区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="10acfc0bf1b542eca5acb85bc489b6a8" pid="837086ee444344e98f9ceac63e0d99ab"><span>史南管理区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li></ul></li><li id="9426e7127042486d99a6b23553bb9cbc" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>川渝油田<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="2e0a6d535af44b37912eb468e43b711f" pid="9426e7127042486d99a6b23553bb9cbc"><span>1区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="c79df3009ff5439285aa7f0c5e0f2929" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>节点3<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="2764c56d7426490c8b4ed914751e4a79" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>节点4<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="c89d543b703b4b118665865c8260ddc3" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>井筒泥浆液面高度<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="f897916c5a8447579c2957cea19c1554" pid="c89d543b703b4b118665865c8260ddc3"><span>50140<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="4b775ad9b4a04da0bd493f6f1e2386e4" pid="f897916c5a8447579c2957cea19c1554"><span>建页1<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="257e9533d31c4d1c911c224947f8e3ac" pid="c89d543b703b4b118665865c8260ddc3"><span>50143<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="c105bdf8a2a541349f8383a21f1393a4" pid="257e9533d31c4d1c911c224947f8e3ac"><span>焦页5<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="9bfdc8a9c39d47b6b41e13cadf1a560e" pid="c89d543b703b4b118665865c8260ddc3"><span>70231<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li><li id="b84d6aadad5b4b55bc3303145134e793" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>回声仪导入<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="42b111f2d266417c8e9084a12abc18cb" pid="b84d6aadad5b4b55bc3303145134e793"><span>节点1<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="397dc58c3e7b4ef191582223140aa03e" pid="42b111f2d266417c8e9084a12abc18cb"><span>节点1<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="648d954d4c7c4f34adba41b9981ed21d" pid="397dc58c3e7b4ef191582223140aa03e"><span>节点1<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li></ul></li></ul></li><li id="97687eb20c3e484ebbb08f84b0fd481a" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>江汉油田<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span><ul style="margin-left: -20px;"><li id="dcfcbbdfc9824f5a9ecd23910d99c006" pid="97687eb20c3e484ebbb08f84b0fd481a"><span>总口区<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="4886b43ed42c45238bc9c6f1d8d59b2d" pid="97687eb20c3e484ebbb08f84b0fd481a"><span>节点1<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li><li id="77c3fb0ba752494ba67e6bf5fb02559f" pid="97687eb20c3e484ebbb08f84b0fd481a"><span>zhourong<input type="checkbox" style="display:none;"><a class="add_child" href="javascript:;"> 添加</a></span></li></ul></li></ul></li></ul></div>
+                            <div id="update_div" class="tab-pane">
+                                <form class="form-horizontal" role="form" style="padding:10px;">
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">
+                                            勾选修改项<br><span style="color:red;font-size:10px;">选一项</span>
+                                        </label>
+                                        <div class="col-sm-5">
+                                            <div id="check_node_div" style="width:260px;height:160px;
+							    					overflow-x:hidden;border:1px #ccc solid;">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">
+                                            修改项<a id="clear_nodes" style="color:red" href="javascript:;" class="glyphicon glyphicon-remove-sign"></a>
+                                        </label>
+                                        <div class="col-sm-5" style="width:290px;">
+                                            <input type="text" style="width:200px" class="form-control" id="updt_node">
+                                            <input type="hidden" id="hide_nodeVal">
+                                            <input type="hidden" id="updt_nodeId">
+                                            <button id="updt_node_btn" type="button" class="btn btn-primary" style="float:right;margin:-35px -5px 0px 0px;">
+                                                确认
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="delete_div" class="tab-pane">
+                                <form class="form-horizontal" role="form" style="padding:10px;">
+                                    <div class="form-group">
+                                        <label for="" class="col-sm-3 control-label">
+                                            勾选删除项<br><span style="color:red;font-size:10px;">选一项</span>
+                                        </label>
+                                        <div class="col-sm-5">
+                                            <div id="del_node_div" style="width:260px;height:160px;
+							    					overflow-x:hidden;border:1px #ccc solid;">
+
+                                            </div>
+                                            <input type="hidden" id="del_nodeVal">
+                                            <input type="hidden" id="del_nodeID">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <button id="save_btn" type="button" class="btn btn-primary">
+                                提交更改
+                            </button>
+                            &nbsp;<span id="node_msg" style="color:red"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- right -->
+            <div id="rgt" class="container-fluid" style="float:right;width:39%;padding:10px 10px 10px 0px;">
+                <div id="rgt_panel" class="panel panel-default" style="position:absolute;width:38%;
+																		height:96%;">
+                    <div class="panel-body" style="padding:10px;">
+                        <div id="right" style="overflow-x:hidden;">
+                            <p style="font-size:16px;font-weight:bold;width:100%;border-bottom:1px #ccc solid;">
+                                结构预览
+                            </p>
+                            <div id="jg_div" style="overflow-x: hidden; height: 425px;">
+                                <ul id="jiegou_show"><li id="93d6a034ff294492bbc1f2d97d2f372b" pid="1"><span>连续液面<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="41fb9caea3954c2197279e70f792e2bc" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>胜利油田<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="0fe509073c1545f6acb21c6cc9069816" pid="41fb9caea3954c2197279e70f792e2bc"><span>河口采油厂<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="531eaaf2608540c8b6b24b6ff1ff8abe" pid="0fe509073c1545f6acb21c6cc9069816"><span>节点7<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="f589b7f88c50493f8862a8f118699950" pid="0fe509073c1545f6acb21c6cc9069816"><span>管理六区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="69e18ba36cc34faa90caecc54d2ea85b" pid="0fe509073c1545f6acb21c6cc9069816"><span>管理七区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="b4a3d3fb7349414d97ef5f9f61234b12" pid="0fe509073c1545f6acb21c6cc9069816"><span>管理一区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="632728323406416ab78e4055a52f25b9" pid="0fe509073c1545f6acb21c6cc9069816"><span>管理九区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="1b88c84adcbd4474b4fd8c584b5878d4" pid="41fb9caea3954c2197279e70f792e2bc"><span>孤东采油厂<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="04023d89d38f4bd39d82e43ad5a46c78" pid="1b88c84adcbd4474b4fd8c584b5878d4"><span>管理一区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="e3157b17b098478ba60c13536fc7690d" pid="1b88c84adcbd4474b4fd8c584b5878d4"><span>管理二区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="0ebfe42bf49548918c713ea070180d8a" pid="1b88c84adcbd4474b4fd8c584b5878d4"><span>管理三区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="aa1810726bad44f38496b03b8775b10c" pid="1b88c84adcbd4474b4fd8c584b5878d4"><span>管理四区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="fbab2f22ad034710a7c024e026556980" pid="41fb9caea3954c2197279e70f792e2bc"><span>桩西采油厂<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="648d738c17fd4c36b9037434488e660a" pid="fbab2f22ad034710a7c024e026556980"><span>管理一区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="890202fe04dc416795bc8f04afdc9c37" pid="fbab2f22ad034710a7c024e026556980"><span>管理二区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="e480c7af06234f07bd5811de9f6c0140" pid="fbab2f22ad034710a7c024e026556980"><span>管理三区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="bb7f95694b0b41618f1d36930b16baf4" pid="fbab2f22ad034710a7c024e026556980"><span>管理四区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="ba9b1f966854495d9d3c68ae8e4bf2ec" pid="41fb9caea3954c2197279e70f792e2bc"><span>纯梁采油厂<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="b0bffbebc2ec4cbdade10168ba9d9bde" pid="ba9b1f966854495d9d3c68ae8e4bf2ec"><span>梁北管理区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="60dfe351efa549048a5c182aa9290cf8" pid="41fb9caea3954c2197279e70f792e2bc"><span>节点5<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="fa549a3948cd4b84ad13ebfa139dec0a" pid="41fb9caea3954c2197279e70f792e2bc"><span>节点6<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="69a67dc70120405b84da726536b0262d" pid="41fb9caea3954c2197279e70f792e2bc"><span>东辛采油厂<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="4cec7ad354f1473caeaba2149a14dc91" pid="69a67dc70120405b84da726536b0262d"><span>营一管理区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="837086ee444344e98f9ceac63e0d99ab" pid="41fb9caea3954c2197279e70f792e2bc"><span>现河采油厂<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="0f706e8fae614d27b2473ef02586e598" pid="837086ee444344e98f9ceac63e0d99ab"><span>现河庄管理区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="10acfc0bf1b542eca5acb85bc489b6a8" pid="837086ee444344e98f9ceac63e0d99ab"><span>史南管理区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li></ul></li><li id="9426e7127042486d99a6b23553bb9cbc" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>川渝油田<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="2e0a6d535af44b37912eb468e43b711f" pid="9426e7127042486d99a6b23553bb9cbc"><span>1区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="c79df3009ff5439285aa7f0c5e0f2929" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>节点3<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="2764c56d7426490c8b4ed914751e4a79" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>节点4<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="c89d543b703b4b118665865c8260ddc3" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>井筒泥浆液面高度<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="f897916c5a8447579c2957cea19c1554" pid="c89d543b703b4b118665865c8260ddc3"><span>50140<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="4b775ad9b4a04da0bd493f6f1e2386e4" pid="f897916c5a8447579c2957cea19c1554"><span>建页1<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="257e9533d31c4d1c911c224947f8e3ac" pid="c89d543b703b4b118665865c8260ddc3"><span>50143<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="c105bdf8a2a541349f8383a21f1393a4" pid="257e9533d31c4d1c911c224947f8e3ac"><span>焦页5<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="9bfdc8a9c39d47b6b41e13cadf1a560e" pid="c89d543b703b4b118665865c8260ddc3"><span>70231<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li><li id="b84d6aadad5b4b55bc3303145134e793" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>回声仪导入<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="42b111f2d266417c8e9084a12abc18cb" pid="b84d6aadad5b4b55bc3303145134e793"><span>节点1<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="397dc58c3e7b4ef191582223140aa03e" pid="42b111f2d266417c8e9084a12abc18cb"><span>节点1<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="648d954d4c7c4f34adba41b9981ed21d" pid="397dc58c3e7b4ef191582223140aa03e"><span>节点1<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li></ul></li></ul></li><li id="97687eb20c3e484ebbb08f84b0fd481a" pid="93d6a034ff294492bbc1f2d97d2f372b"><span>江汉油田<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span><ul style="margin-left: -20px;"><li id="dcfcbbdfc9824f5a9ecd23910d99c006" pid="97687eb20c3e484ebbb08f84b0fd481a"><span>总口区<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="4886b43ed42c45238bc9c6f1d8d59b2d" pid="97687eb20c3e484ebbb08f84b0fd481a"><span>节点1<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li><li id="77c3fb0ba752494ba67e6bf5fb02559f" pid="97687eb20c3e484ebbb08f84b0fd481a"><span>zhourong<input type="checkbox" style="display:none;"><i class="glyphicon glyphicon-collapse-down"></i></span></li></ul></li></ul></li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</body>
+<script src="/layui/layui.js" th:src="@{/layui/layui.js}"></script>
+<script type="text/javascript">
+    layui.config({
+        base: '/layui/' //静态资源所在路径
+    }).extend({
+        mytree: 'lay/modules/mytree'
+    });
+    layui.use(['layer', 'mytree', 'form'], function () {
+        var $ = layui.jquery,
+            layer = layui.layer,
+            form = layui.form,
+            mytree = layui.mytree;
+        mytree({
+            elem: "#classtree", //指定元素
+            nodes: [ //节点
+                {
+                    name: '胜利油田',
+                    spread: true,
+                    // color: "#ffcdda",
+                    id: 1,
+                    children: [{
+                        name: '河口采油厂',
+                        id: 11,
+                        href: '#',
+                        children: [{
+                            name: '管理一区',
+                            id: 111,
+                        },{
+                            name: '管理六区',
+                            id: 112
+                        },{
+                            name: '管理七区',
+                            id: 113
+                        },{
+                            name: '管理九区',
+                            id: 114
+                        }]
+                    },
+                        {
+                            name: '孤东采油厂',
+                            id: 12,
+                            children: [{
+                                name: '管理一区',
+                                id: 121,
+                            },{
+                                name: '管理二区',
+                                id: 122
+                            },{
+                                name: '管理三区',
+                                id: 123
+                            },{
+                                name: '管理四区',
+                                id: 124
+                            }]
+                        },
+                        {
+                            name: '桩西采油厂',
+                            id: 13,
+                            children: [{
+                                name: '管理一区',
+                                id: 131,
+                            },{
+                                name: '管理二区',
+                                id: 132
+                            },{
+                                name: '管理三区',
+                                id: 133
+                            },{
+                                name: '管理四区',
+                                id: 134
+                            }]
+                        },
+                        {
+                            name: '纯梁采油厂',
+                            id: 14,
+                            children: [{
+                                name: '梁北管理区',
+                                id: 141
+                            }]
+                        },
+                        {
+                            name: '东辛采油厂',
+                            id: 15,
+                            children: [{
+                                name: '营一管理区',
+                                id: 151
+                            }]
+                        },
+                        {
+                            name: '现河采油厂',
+                            id: 16,
+                            children: [{
+                                name: '现河庄管理区',
+                                id: 161
+                            },{
+                                name: '史南管理区',
+                                id: 162
+                            }]
+                        }
+                    ]}, {
+                    name: '川渝油田',
+                    spread: false,
+                    id: 2,
+                    children: [{
+                        name: '1区',
+                        id: 21,
+                        spread: true
+                    }]
+                },
+                {
+                    name: '井筒泥浆液面高度',
+                    id: 3,
+                    spread: true,
+                    children: [{
+                        name: '50140',
+                        id: 31,
+                        children: [{
+                            name: '建页1',
+                            id: 311
+                        }]
+                    }, {
+                        name: '50143',
+                        id: 32,
+                        children: [{
+                            name: '焦页5',
+                            id: 321
+                        }]
+                    },{
+                        name: '70231',
+                        id: 33
+                    }]
+                },{
+                    name: '回声仪导入',
+                    id: 4,
+                    spread: true
+
+                },{
+                    name: '江汉油田',
+                    id: 5,
+                    spread: true,
+                    children: [{
+                        name: '总口区',
+                        id: 51
+                    }]
+                }
+            ],
+            click: function(node) { //点击节点回调
+                var $select = $($(this)[0].elem).parents(".layui-form-select");
+                $select.removeClass("layui-form-selected").find(".layui-select-title span").html(node.name).end().find("input:hidden[name='selectID']").val(node.id);
+
+                var selectId = $("input[name='selectID']").val();
+                layer.msg("选择了id="+selectId+"的数据", {
+                    icon: 1,
+                    time: 5000,
+                    offset: '15px'
+                });
+            }
+        });
+
+        // 默认选中
+        var checkNode = {
+            id: 12,
+            name: '子公司管理员'
+        }
+        var $select = $(".layui-form-select");
+        $select.removeClass("layui-form-selected").find(".layui-select-title span").html(checkNode.name).end().find("input:hidden[name='selectID']").val(checkNode.id);
+        form.render();
+
+
+        $(".treeSelect").on("click", ".layui-select-title", function(e) {
+            $(".layui-form-select").not($(this).parents(".layui-form-select")).removeClass("layui-form-selected");
+            $(this).parents(".treeSelect").toggleClass("layui-form-selected");
+            layui.stope(e);
+        }).on("click", "dl i", function(e) {
+            layui.stope(e);
+        });
+        $(document).on("click", function(e) {
+            $(".layui-form-select").removeClass("layui-form-selected");
+        });
+
+    });
+</script>
+
+</html>
