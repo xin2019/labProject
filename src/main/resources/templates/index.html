@@ -22,6 +22,7 @@
 
 </head>
 <body>
+
     <!-- 顶部开始 -->
     <div class="container">
         <div class="logo"><a href="/index">连续液面后台管理</a></div>
@@ -50,7 +51,7 @@
       <div id="side-nav">
         <ul id="nav">
             <li>
-                <a href="javascript:void(0);">
+                <a href="#">
                     <i class="iconfont">&#xe723;</i>
                     <cite>液面数据</cite>
                     <!--<i class="iconfont nav_right">&#xe697;</i>-->
@@ -103,13 +104,13 @@
                             <cite>井号设置</cite>
                         </a>
                     </li >
-                    <li>
+                    <li th:if="${user.permission_type} eq '1' ">
                         <a _href="/xitongshezhi/yonghushezhi" style="margin-left: 15px;">
                             <i class="layui-icon">&#xe655;</i>
                             <cite>用户设置</cite>
                         </a>
                     </li >
-                    <li>
+                    <li th:if="${user.permission_type} eq '1' ">
                         <a _href="/xitongshezhi/jiegouzucheng" style="margin-left: 15px;">
                             <i class="layui-icon">&#xe655;</i>
                             <cite>结构组成</cite>
@@ -148,6 +149,7 @@
     </div> 
 </body>
 <script>
-
+    var user_id="[[${user.user_id}]]";
+    sessionStorage.setItem("user_id",user_id);
 </script>
 </html>

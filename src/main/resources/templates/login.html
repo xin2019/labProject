@@ -18,15 +18,15 @@
 
 </head>
 <body class="login-bg">
-    
+
     <div class="login">
         <div class="message">液面后台登录</div>
         <div id="darkbannerwrap"></div>
         <!--action="/loginValidate" method="post"-->
         <form  role="form" id="loginForm"  class="layui-form" >
-            <input name="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
+            <input name="username" value="admin" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
             <hr class="hr15">
-            <input name="password" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
+            <input name="password" value="admin" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
             <hr class="hr15">
             <!--<input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">-->
             <!--id="loginBtn"-->
@@ -39,6 +39,7 @@
 
 
         $('#loginBtn').click(function () {
+            // alert(encodeURI('液面记录'))
             // $.ajaxSettings.async=false;
             $.ajax({
                 url:"/login1",

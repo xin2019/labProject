@@ -9,13 +9,15 @@
     <!--<link rel="stylesheet" type="text/css" href="/css/iconfont.css" th:href="@{/css/iconfont.css}">-->
     <link rel="stylesheet" href="/layui/css/layui.css" th:href="@{/layui/css/layui.css}">
 
-
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" type="text/css" href="/css/utlis.css" th:href="@{/css/utlis.css}">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+    <!--<script type="text/javascript" src="/js/jquery.min.js" th:src="@{/js/jquery.min.js}"> </script>-->
+    <!--<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">-->
+    <link rel="stylesheet" type="text/css" href="/css/css_utlis.css" th:href="@{/css/css_utlis.css}">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap-treeview.css" th:href="@{/css/bootstrap-treeview.css}">
-    <script type="text/javascript" src="/js/jquery-2.1.1.js" th:src="@{/js/jquery-2.1.1.js}"> </script>
     <script type="text/javascript" src="/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
-    <script type="text/javascript" src="/js/bootstrap-treeview.js" th:src="@{/js/bootstrap-treeview.js}"></script>
+    <!--<script type="text/javascript" src="/js/treeview.js" th:src="@{/js/treeview.js}"></script>-->
 
 
     <style type="text/css">
@@ -56,14 +58,25 @@
                 <input type="text" placeholder="搜索"  style="text-align: center;border-style: none;">
             </div>
         </div>
+        <!--<div id="mytree" style="height: 500px;"></div>-->
         <div class="panel panel-default" style="position:absolute;width:17.7%;height:86%;">
             <div class="panel-body" style="overflow-x: hidden; height: 100%;">
 
-        <ul  id="classtree" class="layui-select-title" style="height: 500px;">
+                <!--左侧菜单树-->
+
+        <!--<ul  id="mytree" class="" style="height: 500px;"> </ul>-->
+                <ul id="mytree" class="nav nav-pills nav-stacked">
+                    <!--<li id="93d6a034ff294492bbc1f2d97d2f372b" pid="1"><span><i class="glyphicon glyphicon-collapse-down"></i><a class="list-group-item">连续液面</a></span>-->
+                    <!--<ul>-->
+
+                    <!--</ul>-->
+
+                    <!--</li>-->
+                </ul>
 
 
-        </ul>
-                <!-- left -->
+
+                 <!--left -->
             </div>
         </div>
     </div>
@@ -78,196 +91,435 @@
                         <div class="fixed-table-body">
 
                         </div>
-                        <table id="table" data-search="true" class="table table-striped table-bordered table-hover" style="margin-top: -30px;width:100%;"><thead class=""><tr><th style="" data-field="dev_id"><div class="th-inner ">设备ID</div><div class="fht-cell"></div></th><th style="" data-field="name1"><div class="th-inner ">井名</div><div class="fht-cell"></div></th><th style="" data-field="data_total"><div class="th-inner ">液面记录(条)</div><div class="fht-cell"></div></th><th style="" data-field="yq_status"><div class="th-inner ">仪器状态</div><div class="fht-cell"></div></th><th style="" data-field="param_on_off"><div class="th-inner ">操作</div><div class="fht-cell"></div></th></tr></thead><tbody><tr class="no-records-found"><td colspan="5">没有找到匹配的记录</td></tr></tbody></table><div class="fixed-table-border" style="width: 861px; height: 362.56px;"></div></div>
-                    <div class="fixed-table-footer" style="display: none;"><table><thead><tr></tr></thead></table></div>
+                        <table id="table" data-search="true" class="table table-striped table-bordered table-hover" style="margin-top: -30px;width:100%;">
+                            <thead class="">
+                                <tr>
+                                    <th style="" data-field="dev_id">
+                                        <div class="th-inner ">设备ID</div>
+                                        <div class="fht-cell"></div>
+                                    </th>
+                                    <th style="" data-field="name1">
+                                        <div class="th-inner ">井名</div>
+                                        <div class="fht-cell"></div>
+                                    </th>
+                                    <th style="" data-field="data_total">
+                                        <div class="th-inner ">液面记录(条)</div>
+                                        <div class="fht-cell"></div>
+                                    </th>
+                                    <th style="" data-field="yq_status">
+                                        <div class="th-inner ">仪器状态</div>
+                                        <div class="fht-cell"></div>
+                                    </th>
+                                    <th style="" data-field="param_on_off">
+                                        <div class="th-inner ">操作</div>
+                                        <div class="fht-cell"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="showContent">
+                            </tbody>
+                        </table>
+                        <div class="fixed-table-border" style="width: 861px; height: 362.56px;"></div>
+                    </div>
+                    <div class="fixed-table-footer" style="display: none;"><table></table></div>
                 </div>
             </div>
         </div>
         </div>
     </div>
 </div>
+
 </body>
-<script src="/layui/layui.js" th:src="@{/layui/layui.js}"></script>
-<script type="text/javascript">
-    layui.config({
-        base: '/layui/' //静态资源所在路径
-    }).extend({
-        mytree: 'lay/modules/mytree'
-    });
-    layui.use(['layer', 'mytree', 'form'], function () {
-        var $ = layui.jquery,
-            layer = layui.layer,
-            form = layui.form,
-            mytree = layui.mytree;
-        mytree({
-            elem: "#classtree", //指定元素
-            nodes: [ //节点
-                {
-                    name: '胜利油田',
-                    spread: true,
-                    // color: "#ffcdda",
-                    id: 1,
-                    children: [{
-                        name: '河口采油厂',
-                        id: 11,
-                        href: '#',
-                        children: [{
-                            name: '管理一区',
-                            id: 111,
-                        },{
-                            name: '管理六区',
-                            id: 112
-                        },{
-                            name: '管理七区',
-                            id: 113
-                        },{
-                            name: '管理九区',
-                            id: 114
-                        }]
-                         },
-                        {
-                        name: '孤东采油厂',
-                        id: 12,
-                        children: [{
-                            name: '管理一区',
-                            id: 121,
-                        },{
-                            name: '管理二区',
-                            id: 122
-                        },{
-                            name: '管理三区',
-                            id: 123
-                        },{
-                            name: '管理四区',
-                            id: 124
-                        }]
-                         },
-                        {
-                            name: '桩西采油厂',
-                            id: 13,
-                            children: [{
-                                name: '管理一区',
-                                id: 131,
-                            },{
-                                name: '管理二区',
-                                id: 132
-                            },{
-                                name: '管理三区',
-                                id: 133
-                            },{
-                                name: '管理四区',
-                                id: 134
-                            }]
-                        },
-                        {
-                            name: '纯梁采油厂',
-                            id: 14,
-                            children: [{
-                                name: '梁北管理区',
-                                id: 141
-                            }]
-                        },
-                        {
-                            name: '东辛采油厂',
-                            id: 15,
-                            children: [{
-                                name: '营一管理区',
-                                id: 151
-                            }]
-                        },
-                        {
-                            name: '现河采油厂',
-                            id: 16,
-                            children: [{
-                                name: '现河庄管理区',
-                                id: 161
-                            },{
-                                name: '史南管理区',
-                                id: 162
-                            }]
+<!--<script src="/layui/layui.js" th:src="@{/layui/layui.js}"></script>-->
+<script>
+    $(function () {
+        // sessionStorage.getItem("user_id")
+        $.ajax({
+            url: '/yemianshuju/getPermissions',
+            type: 'post',
+            data:{
+                'user_id':'2'
+            },
+
+            success:function (obj) {
+
+                var objs=obj.split("=Nodes");
+                var dataV=[];
+                for(var i=1;i<objs.length;i++){
+                    console.log("item=>",objs[i]);
+                    //获取到油田名称
+                    var field=objs[i].split(", plants=")[0].split("=")[1];
+                    var parent = {
+                        text: '',
+                        selectedBackColor: "grey",// 选中时的背景色
+                        selectedColor: 'white',//选中时的文本颜色
+                        nodes: []
+                    };
+                    parent.text=field;
+                    var plants=objs[i].split("oil_field_plant_name=");
+                    for(var j=1;j<plants.length;j++){
+                        console.log("j==",j,plants[j]);
+                        var plantNode={
+                            text: '',
+
+                            selectedBackColor: "grey",// 选中时的背景色
+                            selectedColor: 'white',//选中时的文本颜色
+                            nodes: []
+                        };
+                        plantNode.text=plants[j].split(",")[0];
+
+                        //管理区
+                        var areaReg=/areas.*?]/;
+                        console.log("匹配=》",objs[i].match(areaReg));
+                        var areas=objs[i].match(areaReg)[0].replace("areas=[","").replace("]","").split("NodesOilAreas");
+                        console.log("areasa=>",areas)
+                        for(var k=1;k<areas.length;k++){
+                            console.log(areas[k]);
+                            var tempS=areas[k].replace("(","").replace(")","");
+                            var area={
+                                text: '',
+
+                                selectedBackColor: "grey",// 选中时的背景色
+                                selectedColor: 'white',//选中时的文本颜色
+                                data: '',
+                                emptyIcon: "glyphicon glyphicon-file", //当节点没有子节点的时候显示的图标
+                                showIcon: true //是否显示节点图标
+
+                            };
+                            area.text=tempS.split(",")[0].split("=")[1];
+                            area.data=tempS.split("=")[2];
+                            plantNode.nodes.push(area);
                         }
-                ]}, {
-                    name: '川渝油田',
-                    spread: false,
-                    id: 2,
-                    children: [{
-                        name: '1区',
-                        id: 21,
-                        spread: true
-                    }]
-                },
-                {
-                    name: '井筒泥浆液面高度',
-                    id: 3,
-                    spread: true,
-                    children: [{
-                        name: '50140',
-                        id: 31,
-                        children: [{
-                            name: '建页1',
-                            id: 311
-                        }]
-                    }, {
-                        name: '50143',
-                        id: 32,
-                        children: [{
-                            name: '焦页5',
-                            id: 321
-                        }]
-                    },{
-                        name: '70231',
-                        id: 33
-                    }]
-                },{
-                    name: '回声仪导入',
-                    id: 4,
-                    spread: true
+                        parent.nodes.push(plantNode);
 
-                },{
-                    name: '江汉油田',
-                    id: 5,
-                    spread: true,
-                    children: [{
-                        name: '总口区',
-                        id: 51
-                    }]
+                    }
+                    dataV.push(parent);
                 }
-            ],
-            click: function(node) { //点击节点回调
-                var $select = $($(this)[0].elem).parents(".layui-form-select");
-                $select.removeClass("layui-form-selected").find(".layui-select-title span").html(node.name).end().find("input:hidden[name='selectID']").val(node.id);
+                console.log(dataV);
+                $('#mytree').treeview({
 
-                var selectId = $("input[name='selectID']").val();
-                layer.msg("选择了id="+selectId+"的数据", {
-                    icon: 1,
-                    time: 5000,
-                    offset: '15px'
+                    data: dataV,
+                    onNodeSelected: function (event, node) {
+                        console.log(node);
+                        if (node.data && node.data != undefined) {
+                            $.ajax({
+                                url: '/yemianshuju/getData',
+                                type: 'post',
+                                data: {
+                                    'oil_area_id': node.data
+                                },
+                                success: function (data) {
+                                    var content="";
+                                    var dataT=data.split("OilArea");
+                                    console.log("dataT=>",dataT);
+                                    for(var loop=1;loop<dataT.length;loop++){
+                                        var oil_equipment_id=dataT[loop].split(",")[1].split("=")[1];
+                                        var oil_name=dataT[loop].split(",")[2].split("=")[1];
+                                        var level_records=dataT[loop].split(",")[3].split("=")[1];
+                                        var instrument_status=dataT[loop].split(",")[4].split("=")[1].split(")")[0];
+                                        content+="<tr><td>"+oil_equipment_id+"</td>";
+                                        content+="<td>"+oil_name+"</td>";
+                                        content+="<td>"+level_records+"</td>";
+                                        content+="<td>"+instrument_status+"</td>";
+                                        content+="                                    <td>\n" +
+                                        "                                        <a class=\"btn btn-default btn-xs\" onclick=\"DispatchFunction()\"><span class=\"glyphicon glyphicon-signal\"></span>液面</a>\n" +
+                                        "                                        <a class=\"btn btn-default btn-xs\" onclick=\"DispatchFunction()\"><span class=\"glyphicon glyphicon-list-alt\"></span>参数</a>\n" +
+                                        "                                    </td></tr>";
+                                    }
+                                    $('#showContent').html(content);
+                                }
+                            });
+
+                        }
+                    }
                 });
             }
         });
 
-        // 默认选中
-        var checkNode = {
-            id: 12,
-            name: '子公司管理员'
-        }
-        var $select = $(".layui-form-select");
-        $select.removeClass("layui-form-selected").find(".layui-select-title span").html(checkNode.name).end().find("input:hidden[name='selectID']").val(checkNode.id);
-        form.render();
+    })
 
 
-        $(".treeSelect").on("click", ".layui-select-title", function(e) {
-            $(".layui-form-select").not($(this).parents(".layui-form-select")).removeClass("layui-form-selected");
-            $(this).parents(".treeSelect").toggleClass("layui-form-selected");
-            layui.stope(e);
-        }).on("click", "dl i", function(e) {
-            layui.stope(e);
-        });
-        $(document).on("click", function(e) {
-            $(".layui-form-select").removeClass("layui-form-selected");
-        });
-
-    });
 </script>
 
+
+
+<!--<script type="text/javascript">-->
+
+<!--// [ //节点-->
+<!--//     {-->
+<!--//         name: '胜利油田',-->
+<!--//         spread: true,-->
+<!--//         // color: "#ffcdda",-->
+<!--//         id: 1,-->
+<!--//-->
+<!--//         children: [{-->
+<!--//             name: '河口采油厂',-->
+<!--//             id: 11,-->
+<!--//             children: [{-->
+<!--//                 name: '管理一区',-->
+<!--//                 id: 111,-->
+<!--//                 data: tt-->
+<!--//             },{-->
+<!--//                 name: '管理六区',-->
+<!--//                 id: 112-->
+<!--//-->
+<!--//             },{-->
+<!--//                 name: '管理七区',-->
+<!--//                 id: 113-->
+<!--//             },{-->
+<!--//                 name: '管理九区',-->
+<!--//                 id: 114-->
+<!--//             }]-->
+<!--//         },-->
+<!--//             {-->
+<!--//                 name: '孤东采油厂',-->
+<!--//                 id: 12,-->
+<!--//                 children: [{-->
+<!--//                     name: '管理一区',-->
+<!--//                     id: 121,-->
+<!--//                 },{-->
+<!--//                     name: '管理二区',-->
+<!--//                     id: 122-->
+<!--//                 },{-->
+<!--//                     name: '管理三区',-->
+<!--//                     id: 123-->
+<!--//                 },{-->
+<!--//                     name: '管理四区',-->
+<!--//                     id: 124-->
+<!--//                 }]-->
+<!--//             },-->
+<!--//             {-->
+<!--//                 name: '桩西采油厂',-->
+<!--//                 id: 13,-->
+<!--//                 children: [{-->
+<!--//                     name: '管理一区',-->
+<!--//                     id: 131,-->
+<!--//                 },{-->
+<!--//                     name: '管理二区',-->
+<!--//                     id: 132-->
+<!--//                 },{-->
+<!--//                     name: '管理三区',-->
+<!--//                     id: 133-->
+<!--//                 },{-->
+<!--//                     name: '管理四区',-->
+<!--//                     id: 134-->
+<!--//                 }]-->
+<!--//             },-->
+<!--//             {-->
+<!--//                 name: '纯梁采油厂',-->
+<!--//                 id: 14,-->
+<!--//                 children: [{-->
+<!--//                     name: '梁北管理区',-->
+<!--//                     id: 141-->
+<!--//                 }]-->
+<!--//             },-->
+<!--//             {-->
+<!--//                 name: '东辛采油厂',-->
+<!--//                 id: 15,-->
+<!--//                 children: [{-->
+<!--//                     name: '营一管理区',-->
+<!--//                     id: 151-->
+<!--//                 }]-->
+<!--//             },-->
+<!--//             {-->
+<!--//                 name: '现河采油厂',-->
+<!--//                 id: 16,-->
+<!--//                 children: [{-->
+<!--//                     name: '现河庄管理区',-->
+<!--//                     id: 161-->
+<!--//                 },{-->
+<!--//                     name: '史南管理区',-->
+<!--//                     id: 162-->
+<!--//                 }]-->
+<!--//             }-->
+<!--//         ]}, {-->
+<!--//     name: '川渝油田',-->
+<!--//     spread: false,-->
+<!--//     id: 2,-->
+<!--//     children: [{-->
+<!--//         name: '1区',-->
+<!--//         id: 21,-->
+<!--//         spread: true-->
+<!--//     }]-->
+<!--// },-->
+<!--//     {-->
+<!--//         name: '井筒泥浆液面高度',-->
+<!--//         id: 3,-->
+<!--//         spread: true,-->
+<!--//         children: [{-->
+<!--//             name: '50140',-->
+<!--//             id: 31,-->
+<!--//             children: [{-->
+<!--//                 name: '建页1',-->
+<!--//                 id: 311-->
+<!--//             }]-->
+<!--//         }, {-->
+<!--//             name: '50143',-->
+<!--//             id: 32,-->
+<!--//             children: [{-->
+<!--//                 name: '焦页5',-->
+<!--//                 id: 321-->
+<!--//             }]-->
+<!--//         },{-->
+<!--//             name: '70231',-->
+<!--//             id: 33-->
+<!--//         }]-->
+<!--//     },{-->
+<!--//     name: '回声仪导入',-->
+<!--//     id: 4,-->
+<!--//     spread: true-->
+<!--//-->
+<!--// },{-->
+<!--//     name: '江汉油田',-->
+<!--//     id: 5,-->
+<!--//     spread: true,-->
+<!--//     children: [{-->
+<!--//         name: '总口区',-->
+<!--//         id: 51-->
+<!--//     }]-->
+<!--// }-->
+
+<!--var nodesVal;-->
+<!--var getNodes=  $.ajax({-->
+<!--url:'/yemianshuju/getPermissions',-->
+<!--type:'post',-->
+<!--data:{-->
+<!--'user_id':'2'-->
+<!--},-->
+<!--success:function(data){-->
+
+<!--nodesVal=data;-->
+<!--}-->
+<!--})-->
+<!--$.when(getNodes).done(function () {-->
+<!--//要执行的操作-->
+<!--console.log("kkt=>",nodesVal);-->
+
+<!--});-->
+
+<!--layui.config({-->
+<!--base: '/layui/' //静态资源所在路径-->
+<!--}).extend({-->
+<!--mytree: 'lay/modules/mytree'-->
+<!--});-->
+<!--console.log("kkt55=>",nodesVal);-->
+<!--layui.use(['layer', 'mytree', 'form'], function () {-->
+<!--// $ = layui.jquery,-->
+<!--layer = layui.layer,-->
+<!--form = layui.form,-->
+<!--mytree = layui.mytree;-->
+<!--getTreeDatas();-->
+<!--// mytree({-->
+<!--//     elem: "#classtree", //指定元素-->
+<!--//-->
+<!--//     nodes: nodesVal-->
+<!--//     ,-->
+<!--//     click: function(node) { //点击节点回调-->
+<!--//         console.log("node=>",node);-->
+<!--//         $('#showContent').html(node.data);-->
+<!--//         $.ajax({-->
+<!--//             url: '/yemianshuju/getData',-->
+<!--//             type: 'post',-->
+<!--//             success:function (data) {-->
+<!--//                 console.log(data)-->
+<!--//             }-->
+<!--//         })-->
+<!--//         // console.log("this->",$($(this)[0].elem),$(this));-->
+<!--//         // var $select = $($(this)[0].elem).parents(".layui-form-select");-->
+<!--//         // $select.removeClass("layui-form-selected").find(".layui-select-title span").html(node.name).end().find("input:hidden[name='selectID']").val(node.id);-->
+<!--//         //-->
+<!--//         // var selectId = $("input[name='selectID']").val();-->
+<!--//         // console.log("select==>",selectId);-->
+<!--//         // layer.msg("选择了id="+selectId+"的数据", {-->
+<!--//         //     icon: 1,-->
+<!--//         //     time: 5000,-->
+<!--//         //     offset: '15px'-->
+<!--//         // });-->
+<!--//     }-->
+<!--// });-->
+
+<!--// // 默认选中-->
+<!--// var checkNode = {-->
+<!--//     id: 12,-->
+<!--//     name: '子公司管理员'-->
+<!--// }-->
+<!--// var $select = $(".layui-form-select");-->
+<!--// $select.removeClass("layui-form-selected").find(".layui-select-title span").html(checkNode.name).end().find("input:hidden[name='selectID']").val(checkNode.id);-->
+<!--// form.render();-->
+<!--//-->
+<!--//-->
+<!--// $(".treeSelect").on("click", ".layui-select-title", function(e) {-->
+<!--//     $(".layui-form-select").not($(this).parents(".layui-form-select")).removeClass("layui-form-selected");-->
+<!--//     $(this).parents(".treeSelect").toggleClass("layui-form-selected");-->
+<!--//     layui.stope(e);-->
+<!--// }).on("click", "dl i", function(e) {-->
+<!--//     layui.stope(e);-->
+<!--// });-->
+<!--// $(document).on("click", function(e) {-->
+<!--//     // $(".layui-form-select").removeClass("layui-form-selected");-->
+<!--//     console.log(e);-->
+<!--//     var tt="<td colspan=\"1\">\n" +&ndash;&gt;-->
+<!--//         "                                        1\n" +-->
+<!--//         "                                    </td>\n" +-->
+<!--//         "                                    <td colspan=\"1\">\n" +-->
+<!--//         "                                        1\n" +-->
+<!--//         "                                    </td>\n" +-->
+<!--//         "                                    <td colspan=\"1\">\n" +-->
+<!--//         "                                        1\n" +-->
+<!--//         "                                    </td>\n" +-->
+<!--//         "                                    <td colspan=\"1\">\n" +-->
+<!--//         "                                        1\n" +-->
+<!--//         "                                    </td>\n" +-->
+<!--//         "                                    <td colspan=\"1\">\n" +-->
+<!--//         "                                        <a class=\"btn btn-default btn-xs\" onclick=\"DispatchFunction()\"><span class=\"glyphicon glyphicon-signal\"></span>液面</a>\n" +-->
+<!--//         "                                        <a class=\"btn btn-default btn-xs\" onclick=\"DispatchFunction()\"><span class=\"glyphicon glyphicon-list-alt\"></span>参数</a>\n" +-->
+<!--//         "                                    </td>";-->
+<!--//-->
+<!--//     $('#showContent').html(tt);-->
+<!--//     layui.stope(e);-->
+<!--// });-->
+
+<!--});-->
+<!--function getTreeDatas() {-->
+<!--$.ajax({-->
+<!--url:'/yemianshuju/getPermissions',-->
+<!--type:'post',-->
+<!--data:{-->
+<!--'user_id':'2'-->
+<!--},-->
+<!--success:function (data) {-->
+<!--console.log("data===>",data)-->
+<!--mytree({-->
+<!--elem: "#classtree", //指定元素-->
+
+<!--nodes: data-->
+<!--,-->
+<!--click: function(node) { //点击节点回调-->
+<!--console.log("node=>",node);-->
+<!--$('#showContent').html(node.data);-->
+<!--$.ajax({-->
+<!--url: '/yemianshuju/getData',-->
+<!--type: 'post',-->
+<!--success:function (data) {-->
+<!--console.log(data)-->
+<!--}-->
+<!--})-->
+<!--// console.log("this->",$($(this)[0].elem),$(this));-->
+<!--// var $select = $($(this)[0].elem).parents(".layui-form-select");-->
+<!--// $select.removeClass("layui-form-selected").find(".layui-select-title span").html(node.name).end().find("input:hidden[name='selectID']").val(node.id);-->
+<!--//-->
+<!--// var selectId = $("input[name='selectID']").val();-->
+<!--// console.log("select==>",selectId);-->
+<!--// layer.msg("选择了id="+selectId+"的数据", {-->
+<!--//     icon: 1,-->
+<!--//     time: 5000,-->
+<!--//     offset: '15px'-->
+<!--// });-->
+<!--}-->
+<!--});-->
+<!--}-->
+<!--});-->
+<!--}-->
+
+<!--</script>-->
 </html>

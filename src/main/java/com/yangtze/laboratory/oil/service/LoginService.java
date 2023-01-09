@@ -1,5 +1,6 @@
 package com.yangtze.laboratory.oil.service;
 
+import com.yangtze.laboratory.oil.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -13,5 +14,5 @@ public interface LoginService {
     /*
   验证登录用户
    */
-    public boolean loginValidate(String username, String password);
+    public User loginValidate(String username, String password);
 }

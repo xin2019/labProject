@@ -33,7 +33,7 @@ public class MysqlDocumentUtil {
         hikariConfig.setDriverClassName("org.gjt.mm.mysql.Driver");
         hikariConfig.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/oil");
         hikariConfig.setUsername("root");
-        hikariConfig.setPassword("password");
+        hikariConfig.setPassword("123456");
         //设置可以获取tables remarks信息
         hikariConfig.addDataSourceProperty("useInformationSchema", "true");
         hikariConfig.setMinimumIdle(2);
@@ -50,7 +50,7 @@ public class MysqlDocumentUtil {
                 //生成模板实现
                 .produceType(EngineTemplateType.freemarker)
                 //自定义文件名称
-                .fileName("自定义文件名称").build();
+                .fileName("数据库说明文档").build();
 
         //忽略表
         ArrayList<String> ignoreTableName = new ArrayList<>();

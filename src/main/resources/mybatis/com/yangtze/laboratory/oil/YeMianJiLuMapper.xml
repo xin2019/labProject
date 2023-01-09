@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangtze.laboratory.oil.dao.yemianjilu.YeMianShuJuDao">
+
+    <!--获取油田管理区数据-->
+    <select id="getAreaDatas" resultType="OILAREA">
+        select * from oil_area where oil_area_id=#{oil_area_id}
+    </select>
+    <!--通过用户id查询表用户权限表，获得该用户可以跳转的路径-->
+    <select id="getPermissions" resultType="UserPermission">
+        select * from user_permission where user_id=#{user_id};
+    </select>
+
+</mapper>
